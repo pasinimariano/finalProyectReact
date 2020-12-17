@@ -4,11 +4,11 @@ import logo from './img/logo.png';
 
 
 
-function NavBar(props) {
+function NavBar (props) {
 
     return(
         <div className= 'NavBarContainer'> 
-            <img src= {logo} />
+            <img src= {logo} alt= '' />
             {props.data1.map (option =>
                 <Link to={option.path}> 
                     <li className= 'Nav1'> {option.label} </li>

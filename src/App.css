@@ -96,3 +96,74 @@
   left: 220px;
   top: 170px;
 }
+
+.ContainerProducts {
+  height: 150px;
+  width: 250px;
+  float: left;
+  margin-top: 25px;
+  margin-left: 75px;
+}
+
+.ContainerProducts h3{
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.ContainerProducts img{
+  display: block;
+  margin: auto;
+  margin-bottom: 45px;
+  width: 50%;
+} 
+
+.ContainerProducts p {
+  text-align: justify;
+}
+
+.ContainerProducts button {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.LoadingState {
+  font-size: 25px;
+}
+
+.ContainerDetails img{
+  width: 45%;
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+
+.ContainerDetails h2{
+  width: 250px;
+  text-align: center;
+  position: relative;
+  top: -275px;
+  left: 900px;
+}
+
+.ContainerDetails div{
+  position: relative;
+  top: -275px;
+  left: 970px;
+}
+
+.ContainerDetails p{
+  width: 500px;
+  position: relative;
+  top: -250px;
+  left: 750px;
+  text-align: left;
+  text-align: justify;
+}
+
+.ContainerDetails button {
+  width: 85px;
+  position: relative;
+  top: -200px;
+  left: 980px;
+}

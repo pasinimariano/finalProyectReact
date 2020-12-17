@@ -8,7 +8,7 @@ function Home() {
 
     const handleHistory= () => {
       history.push ('/shop')
-    }
+    };
 
     return (
       <div className="ContainerHome">

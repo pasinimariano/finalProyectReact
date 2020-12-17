@@ -1,11 +1,9 @@
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
 import './App.css';
-import NavBar from './Components/NavBar'
-import Home from './Pages/Home'
-import Contact from './Pages/Contact'
-import Shop from './Pages/Shop'
-import Login from './Pages/Login'
-import Account from './Pages/Account'
+import NavBar from './Components/NavBar';
+import RoutesWeb  from  './Components/RoutesWeb';
+
 
 function App() {
 
@@ -41,11 +39,7 @@ function App() {
           data=  {options1} 
           data1= {options2} 
       />
-      <Route exact path= '/' exact component= {Home} />
-      <Route exact path= '/contact' exact component= {Contact} />
-      <Route exact path= '/shop' exact component= {Shop} />
-      <Route exact path= '/login' exact component= {Login} />
-      <Route exact path= '/account' exact component= {Account} />
+      <RoutesWeb />
     </BrowserRouter>
   );
 }

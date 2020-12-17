@@ -1,48 +1,46 @@
-import React, { Component } from 'react';
-import Products from '../Components/Products'
+import React, { useState,useEffect } from 'react';
+import Products from '../Components/Products';
 
 
+function Shop () {
 
-class Shop extends Component {
+    const [items, setItems] = useState ({
+        products : [],
+        loading : true
+    });
 
-    constructor (props) {
-        super (props)
-        this.state= {
-            products : [],
-            loading : true
-        }
+    useEffect (
+        () => {
+            fetch ('https://jsonfy.com/items')
+            .then (res => res.json())
+            .then ((data) => {
+                setItems (
+                    {products : data}, 
+                    {loading : false})
+                })
+        }, []
+    );
+
+    if (items.loading) {
+        return(
+            <div className= 'LoadingState'> 
+                Loading ...
+            </div>
+        )
     }
+    else {
+        return(
+            <> 
+               {items.products.map (products =>
+                    <div>
+                        <Products data= {products} />
+                    </div>   
+                )}
+            </>
+        )
+    };
 
-    componentDidMount () {
-        fetch ('https://jsonfy.com/items')
-        .then (res => res.json())
-        .then ((data) => {
-            this.setState ({
-                products : data,
-                loading : false
-            })
-        })
-    }
-
-    render () {
-        if (this.state.loading) {
-            return (
-                <h3> Loading ... </h3>
-            )
-        }
-
-        else {
-            return (
-                <div>
-                    {this.state.products.map (products =>
-                        <div>
-                            <Products data= {products} />
-                        </div>    
-                    )}
-                </div>
-            )
-        }
-    }
 }
 
 export default Shop;
+
